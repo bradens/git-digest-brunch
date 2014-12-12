@@ -9,7 +9,7 @@ module.exports = class GitDigest
   constructor: (@config) ->
 
   onCompile: ->
-    return unless @config.optimize
+    return unless @config.bustCache
     @execute 'git rev-parse --short HEAD', @replace
 
   execute: (command, callback) ->
