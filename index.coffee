@@ -17,7 +17,7 @@ module.exports = class GitDigest
 
   replace: (digest) =>
     replace
-      regex: /\?DIGEST/g
+      regex: /\?CACHEBUSTER/g
       replacement: '?' + digest.chomp()
       paths: [@config.paths.public]
       recursive: true
